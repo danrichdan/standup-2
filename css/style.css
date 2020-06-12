@@ -2,3 +2,15 @@
   margin: 10px auto;
   width: 75%;
 }
+
+.content-active {
+  background-color: blue;
+}
+
+.d-block {
+  display: block;
+}
+
+.d-none {
+  display: none;
+}
