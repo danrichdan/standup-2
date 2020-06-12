@@ -3,27 +3,39 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="css/bulma.min.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bulma@0.9.0/css/bulma.min.css"
+    />
     <link rel="stylesheet" href="css/style.css" />
     <title>Standup</title>
   </head>
   <body>
-    <header class="has-background-primary">
-      <h1 class="is-size-2 has-text-centered has-text-black">Standup</h1>
+    <!--Start Header-->
+    <header class="has-background-primary-light">
+      <h1 class="is-size-2 has-text-centered has-text-primary">Standup</h1>
     </header>
+    <!--Begin Main Content-->
     <main>
       <div class="container">
         <div class="box">
+          <!--Begin Form-->
           <form>
+            <!--Select Box-->
+            <div class="select mb-3">
+              <select>
+                <option value="have-done">Have Done</option>
+                <option value="working-on">Working on</option>
+                <option value="blockers">Blockers</option>
+              </select>
+            </div>
+            <!--Input-->
             <div class="field">
               <div class="control">
-                <input
-                  class="input"
-                  type="text"
-                  placeholder="Have Done, Working on, or Blocker"
-                />
+                <input class="input" type="text" placeholder="Have Done" />
               </div>
             </div>
+            <!--Button-->
             <div class="control">
               <button class="button is-primary is-outlined is-normal">
                 Add to List
@@ -31,22 +43,37 @@
             </div>
           </form>
         </div>
+        <!--End Form Box-->
+        <!--Begin Tabs-->
         <div class="tabs is-centered is-large">
           <ul>
-            <li><a>Have Done</a></li>
-            <li><a>Will Do</a></li>
-            <li><a>Blockers</a></li>
-            <li><a>Add Stuff</a></li>
+            <li class="tab tab1 is-active"><a>Have Done</a></li>
+            <li class="tab tab2"><a>Will Do</a></li>
+            <li class="tab tab3"><a>Blockers</a></li>
           </ul>
         </div>
-        <div>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
-          accusamus cumque aperiam ipsam itaque. Dicta cumque voluptatem dolorum
-          pariatur. Dolor similique saepe quis, eligendi quisquam ex corporis
-          reiciendis atque aut.
+        <!--Begin Tabs Content-->
+        <div
+          class="tab-content tab1-content d-block"
+          id="have-done-list-container"
+        >
+          Have Done
+        </div>
+        <div
+          class="tab-content tab2-content d-none"
+          id="working-on-list-container"
+        >
+          Working On
+        </div>
+        <div
+          class="tab-content tab3-content d-none"
+          id="blockers-list-container"
+        >
+          Blockers
         </div>
       </div>
+      <!--End Container-->
     </main>
-    <script src="app.js"></script>
+    <script src="js/procedural.js"></script>
   </body>
 </html>
