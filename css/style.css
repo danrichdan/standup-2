@@ -14,3 +14,18 @@
 .d-none {
   display: none;
 }
+
+.tabs-content-container {
+  display: flex;
+  justify-content: center;
+}
+
+i {
+  margin-left: 20px;
+}
+
+.tab-content li {
+  padding: 5px 0;
+  margin: 5px 0;
+  font-size: 1.2rem;
+}

@@ -9,21 +9,25 @@
     />
     <link rel="stylesheet" href="css/style.css" />
     <title>Standup</title>
+    <script
+      src="https://kit.fontawesome.com/1a2cfdf3ae.js"
+      crossorigin="anonymous"
+    ></script>
   </head>
   <body>
     <!--Start Header-->
-    <header class="has-background-primary-light">
-      <h1 class="is-size-2 has-text-centered has-text-primary">Standup</h1>
+    <header class="has-background-link">
+      <h1 class="is-size-2 has-text-centered has-text-white">Standup</h1>
     </header>
     <!--Begin Main Content-->
     <main>
       <div class="container">
         <div class="box">
           <!--Begin Form-->
-          <form>
+          <form id="standup-form">
             <!--Select Box-->
             <div class="select mb-3">
-              <select>
+              <select id="standup-category">
                 <option value="have-done">Have Done</option>
                 <option value="working-on">Working on</option>
                 <option value="blockers">Blockers</option>
@@ -32,12 +36,17 @@
             <!--Input-->
             <div class="field">
               <div class="control">
-                <input class="input" type="text" placeholder="Have Done" />
+                <input
+                  id="standup-item"
+                  class="input"
+                  type="text"
+                  placeholder="Have Done"
+                />
               </div>
             </div>
             <!--Button-->
             <div class="control">
-              <button class="button is-primary is-outlined is-normal">
+              <button class="button is-link is-outlined is-normal">
                 Add to List
               </button>
             </div>
@@ -48,32 +57,28 @@
         <div class="tabs is-centered is-large">
           <ul>
             <li class="tab tab1 is-active"><a>Have Done</a></li>
-            <li class="tab tab2"><a>Will Do</a></li>
+            <li class="tab tab2"><a>Working On</a></li>
             <li class="tab tab3"><a>Blockers</a></li>
           </ul>
         </div>
         <!--Begin Tabs Content-->
-        <div
-          class="tab-content tab1-content d-block"
-          id="have-done-list-container"
-        >
-          Have Done
-        </div>
-        <div
-          class="tab-content tab2-content d-none"
-          id="working-on-list-container"
-        >
-          Working On
-        </div>
-        <div
-          class="tab-content tab3-content d-none"
-          id="blockers-list-container"
-        >
-          Blockers
-        </div>
+        <section class="tabs-content-container">
+          <div class="tab-content tab1-content d-block">
+            Have Done
+            <ul id="have-done-list"></ul>
+          </div>
+          <div class="tab-content tab2-content d-none">
+            Working On
+            <ul id="working-on-list"></ul>
+          </div>
+          <div class="tab-content tab3-content d-none">
+            Blockers
+            <ul id="blockers-list"></ul>
+          </div>
+        </section>
       </div>
       <!--End Container-->
     </main>
-    <script src="js/oop.js"></script>
+    <script src="js/procedural.js"></script>
   </body>
 </html>
