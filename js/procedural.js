@@ -69,7 +69,22 @@ function addItemToDom(standupObj) {
   list.appendChild(li);
 }
 
-// Delete Item, Update Item, Remove All Items
+// Delete Item
+document.querySelectorAll(".tab-content ul").forEach(function (ul) {
+  ul.addEventListener("click", function (e) {
+    if (e.target.classList.contains("fa-times")) {
+      e.target.parentElement.parentElement.remove();
+    }
+
+    if (e.target.classList.contains("fa-edit")) {
+      console.log(e.target.parentElement.parentElement);
+    }
+  });
+});
+
+//Update Item
+
+//Remove All Items
 // Get, Add, Update and remove from LS
 // Change select option and the placeholder changes too (maybe the tab as well?)
 // On submit the Tab changes to the category that was submitted
