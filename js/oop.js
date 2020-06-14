@@ -1,3 +1,11 @@
+// Standup class
+class Standup {
+  constructor(category, item) {
+    this.category = category;
+    this.item = item;
+  }
+}
+
 class Tabs {
   constructor() {
     this.tabs = document.querySelector(".tabs");
@@ -42,4 +50,3 @@ new Tabs();
 // Form
 // List
 // Store
-// Validation
