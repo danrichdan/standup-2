@@ -22,40 +22,6 @@
     <!--Begin Main Content-->
     <main>
       <div class="container">
-        <div class="box">
-          <!--Begin Form-->
-          <form id="standup-form">
-            <!--Select Box-->
-            <div class="select mb-3">
-              <select id="standup-category">
-                <option value="have-done">Have Done</option>
-                <option value="working-on">Working on</option>
-                <option value="blockers">Blockers</option>
-              </select>
-            </div>
-            <!--Input-->
-            <div class="field">
-              <div class="control">
-                <input
-                  id="standup-item"
-                  class="input"
-                  type="text"
-                  placeholder="Have Done"
-                />
-              </div>
-            </div>
-            <!--Button-->
-            <div class="control">
-              <button
-                class="button is-link is-outlined is-normal"
-                id="standupForm Btn"
-              >
-                Add to List
-              </button>
-            </div>
-          </form>
-        </div>
-        <!--End Form Box-->
         <!--Begin Tabs-->
         <div class="tabs is-centered is-large">
           <ul>
@@ -67,21 +33,118 @@
         <!--Begin Tabs Content-->
         <section class="tabs-content-container">
           <div class="tab-content tab1-content d-block">
-            Have Done
-            <ul id="have-done-list"></ul>
+            <div class="box">
+              <!--Begin Have Done Form-->
+              <form id="have-done-form">
+                <!--Select Box-->
+                <!--Input-->
+                <div class="field">
+                  <div class="control">
+                    <input
+                      id="have-done-input"
+                      class="input"
+                      type="text"
+                      placeholder="Have Done"
+                    />
+                  </div>
+                </div>
+                <!--Button-->
+                <div class="control">
+                  <button
+                    class="button is-link is-outlined is-normal"
+                    id="have-done-btn"
+                  >
+                    Add Have Done
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!--End Form Box-->
+            <section class="list">
+              <ul id="have-done-list"></ul>
+            </section>
           </div>
+          <!--End Have Done-->
+          <!--Begin Working On-->
           <div class="tab-content tab2-content d-none">
-            Working On
-            <ul id="working-on-list"></ul>
+            <div class="box">
+              <!--Begin Form-->
+              <form id="working-on-form">
+                <!--Input-->
+                <div class="field">
+                  <div class="control">
+                    <input
+                      id="working-on-input"
+                      class="input"
+                      type="text"
+                      placeholder="Working On"
+                    />
+                  </div>
+                </div>
+                <!--Button-->
+                <div class="control">
+                  <button
+                    class="button is-link is-outlined is-normal"
+                    id="working-on-btn"
+                  >
+                    Add Working On
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!--End Form-->
+            <section class="list">
+              <ul id="working-on-list"></ul>
+            </section>
           </div>
+          <!--End Working On-->
+          <!--Begin Blockers-->
           <div class="tab-content tab3-content d-none">
-            Blockers
-            <ul id="blockers-list"></ul>
+            <div class="box">
+              <!--Begin Form-->
+              <form id="blockers-form">
+                <!--Input-->
+                <div class="field">
+                  <div class="control">
+                    <input
+                      id="blockers-input"
+                      class="input"
+                      type="text"
+                      placeholder="Blockers"
+                    />
+                  </div>
+                </div>
+                <!--Button-->
+                <div class="control">
+                  <button
+                    class="button is-link is-outlined is-normal"
+                    id="blockers-btn"
+                  >
+                    Add Blocker
+                  </button>
+                </div>
+              </form>
+            </div>
+            <!--End Form Box-->
+            <section class="list">
+              <ul id="blockers-list"></ul>
+            </section>
           </div>
+          <!--End Blockers-->
         </section>
       </div>
       <!--End Container-->
     </main>
-    <script src="js/procedural.js"></script>
+    <footer class="mt-5">
+      <div class="content has-text-centered">
+        <button
+          class="button is-outlined is-danger is-centered"
+          id="blockers-btn"
+        >
+          Remove All Standup Items
+        </button>
+      </div>
+    </footer>
+    <script src="js/oop.js"></script>
   </body>
 </html>
